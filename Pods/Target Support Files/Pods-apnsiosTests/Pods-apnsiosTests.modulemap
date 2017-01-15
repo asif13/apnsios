@@ -1,0 +1,6 @@
+framework module Pods_apnsiosTests {
+  umbrella header "Pods-apnsiosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
