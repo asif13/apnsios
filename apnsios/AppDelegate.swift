@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         center.requestAuthorization(options: [.badge,.alert,.sound], completionHandler: {
             (granted,error) in print(granted)
         })
-        application.registerForRemoteNotifications()
+//        application.registerForRemoteNotifications()
+        initParse()
         return true
         
     }
@@ -28,8 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Initialize Parse parse.com api
         let configuration = ParseClientConfiguration{
             $0.applicationId = "daupsfbubaf8rfairwubngur9bgnr"
+            
             $0.server = "http://localhost:1337/parse"
-            $0.clientKey = "client"
+            $0.clientKey = nil
         }
         
         Parse.initialize(with: configuration)
